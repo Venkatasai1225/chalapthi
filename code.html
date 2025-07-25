@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f2027;
+      color: #0edb4b;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    /* /@keyframes slideIn { */
+      /* from { opacity: 0; transform: translateY(-50px); } */
+      /* to { opacity: 1; transform: translateY(0); } */
+    /* }/ */
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #220beb;
+      object-fit: cover;
+      margin-bottom: 15px;
+      animation: pulse 2s infinite;
+    }
+
+    /* @keyframes pulse { */
+      /* 0%, 100% { transform: scale(1); } */
+      /* 50% { transform: scale(1.05); } */
+    /* } */
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-weight: 300;
+      color: #f0eded;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .bio {
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .video-section,
+    .projects,
+    .feedback,
+    .contact {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #fff3;
+      transition: transform 0.3s ease;
+    }
+
+    video:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 1.8em;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      color: #ccc;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    .project-card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 0 10px #0005;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    form {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border: 2px solid #00bcd4;
+    }
+
+    button {
+      background: #00bcd4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0097a7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="04.jpg" alt="Profile Picture" class="profile-img">
+    <h1>Vemula Venkata Sai</h1>
+    <h3>Frontend Developer & Creative Coder</h3>
+  </header>
+
+  <div class="container">
+    <div class="bio">
+     
+      <p>Hello! I’m a passionate web developer who loves building interactive and visually appealing websites. I specialize in HTML, CSS, JavaScript, and React. Scroll down to see my work and certifications.</p>
+    </div>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Meta Front-End Developer (Coursera)</li>
+        <li>JavaScript Algorithms (freeCodeCamp)</li>
+        <li>MongoDB for Beginners</li>
+      </ul>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio site with animations and contact form.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Built using OpenWeather API and modern JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Todo List</h3>
+        <p>Simple and clean task manager using React.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section class="feedback" id="feedback">
+      <h2>Feedback</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <textarea rows="4" placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Vemula Venkata Sai | Portfolio Site
+  </footer>
+
+</body>
+</html>
